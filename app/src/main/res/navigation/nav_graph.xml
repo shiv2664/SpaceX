@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/shipListingFragment">
+
+    <fragment
+        android:id="@+id/shipListingFragment"
+        android:name="com.shivam.spacex.fragments.listing.view.ShipListingFragment"
+        android:label="fragment_ship_listing"
+        tools:layout="@layout/fragment_ship_listing">
+        <action
+            android:id="@+id/action_shipListingFragment_to_shipDetailFragment"
+            app:destination="@id/shipDetailFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/shipListingFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/shipDetailFragment"
+        android:name="com.shivam.spacex.fragments.detail.view.ShipDetailFragment"
+        android:label="fragment_ship_detail"
+        tools:layout="@layout/fragment_ship_detail" />
+    <fragment
+        android:id="@+id/bookmarks"
+        android:name="com.shivam.spacex.fragments.bookmarks.Bookmarks"
+        android:label="fragment_bookmarks"
+        tools:layout="@layout/fragment_bookmarks" />
+</navigation>
